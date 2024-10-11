@@ -189,11 +189,11 @@ input {
     }
 
     [comp="Leaderboard"] li h3 {
-        font-size: 30px;
+        font-size: 50px;
     }
 
-    [comp="Leaderboard"] li:nth-child(1) {
-        font-size: 35px;
+    [comp="Leaderboard"] li {
+        font-size: 50px;
     }
 
 }
