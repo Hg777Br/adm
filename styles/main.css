@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    background-color: #444444;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    touch-action: manipulation;
+}
+
+button {
+    display: block;
+    margin: 50px auto;
+    width: calc(100% - 100px);
+    height: 100px;
+    font-size: 50px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button.player {
+    display: block;
+    border-radius: 25px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-color: gold;
+    color: gold
+}
+
+#players {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    height: 1500px;
+}
+
+#player-name {
+    display: block;
+    margin: 50px auto;
+    width: calc(100% - 100px);
+    height: 100px;
+    font-size: 80px;
+}
+
+img {
+    display: block;
+    margin: 50px auto;
+    width: auto;
+    height: 500px;
+    border-radius: 250px;
+    font-size: 50px;
+}
+
+h1#title {
+    text-align: center;
+    font-size: 100px;
+}
+
+#players-ingame h1 {
+    font-size: 60px;
+    margin-left: 30px;
+    color: gold
+}
+
+#score-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#score-container button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+}
+
+#score-container input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    max-width: 300px;
+}
+
+input {
+    display: block;
+    margin: 50px auto;
+    width: calc(100% - 100px);
+    height: 100px;
+    font-size: 50px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+[comp="Leaderboard"] {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 500px;
+    height: fit-content;
+    width: 500px;
+}
+
+
+
+[comp="Leaderboard"] h1 {
+    text-align: center;
+}
+
+[comp="Leaderboard"] div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#update-cooldown {
+    width: 100%;
+    height: 5px;
+    background-color: wheat;
+    border-radius: 5px;
+    margin: 10px;
+    animation: cooldown 10s ease-in;
+}
+
+[comp="Leaderboard"] ol {
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 500px;
+    color: rgb(138, 138, 138);
+
+    h3 {
+        margin: 3px;
+    }
+}
+
+[comp="Leaderboard"] ol li:nth-child(1) {
+    color: goldenrod;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+[comp="Leaderboard"] ol li:nth-child(2) {
+    color: silver;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+[comp="Leaderboard"] ol li:nth-child(3) {
+    color: #CD7F32;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 1000px) {
+    [comp="Leaderboard"] {
+        width: 90%;
+        height: calc(100vh - 300px);
+    }
+
+    [comp="Leaderboard"] h1 {
+        font-size: 50px;
+    }
+
+    #update-cooldown {
+        height: 10px;
+    }
+
+    [comp="Leaderboard"] li {
+        margin-left: 30px;
+    }
+
+    [comp="Leaderboard"] li h3 {
+        font-size: 30px;
+    }
+
+    [comp="Leaderboard"] li:nth-child(1) {
+        font-size: 35px;
+    }
+
+}
